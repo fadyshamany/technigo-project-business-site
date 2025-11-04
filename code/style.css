@@ -1,5 +1,4 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+/* Changing background from blue to other color*/
 body {
   background: linear-gradient(to bottom right, #d9e4f5, #f6f9fc);
 }
