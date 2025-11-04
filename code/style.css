@@ -1,10 +1,11 @@
 /* After you've linked the CSS file in the HTML,
 this should turn the background blue ;) */
 body {
-  background: blue;
+  background: linear-gradient(to bottom right, #d9e4f5, #f6f9fc);
 }
 
-*{ box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -14,52 +15,105 @@ body {
 /* HERO SECTION */
 .hero {
   position: relative;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('assets/office.jpg') center/cover no-repeat;
+  border-bottom: 3px solid #1e6b4e;
 }
 
 .hero-image {
-  width:40%;
-  height: 40%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  filter: brightness(70%);
   position: absolute;
   top: 0;
   left: 0;
 }
 
+/* remember 1 rem = 16 px*/
 .hero-text {
   position: relative;
   z-index: 2;
-  color: white;
+  color: #fff;
   text-align: center;
-  top: 40%;
-  transform: translateY(-40%);
+  max-width: 700px;
+  padding: 0 1rem;
 }
-/* remember 1 rem = 16 px*/
-.hero-text h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-.hero-text p { font-size: 1.2rem; margin-bottom: 1rem; }
+
+.hero-text h1 { 
+  font-size: 2.8rem; 
+  margin-bottom: 0.75rem; 
+  letter-spacing: 1px;
+  text-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+}
+
+.hero-text p { 
+  font-size: 1.2rem; 
+  margin-bottom: 1.5rem;
+  color: #e8e8e8;
+}
 
 /* Button */
 .btn {
-  background: #1e6b4e;
+  background: linear-gradient(to right, #1e6b4e, #289e6b);
   color: white;
   padding: 0.7rem 1.4rem;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #289e6b, #1e6b4e);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
 
 /* ABOUT SECTION */
 .about {
-  padding: 2rem;
+  padding: 3rem 2rem;
   text-align: center;
-  background: #fafafa;
+  background: #fff;
+  border-top: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.about h2 {
+  color: #1e6b4e;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 /* SIGNUP FORM */
 .signup {
-  padding: 2rem;
+  padding: 3rem 2rem;
   max-width: 600px;
-  margin: auto;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.signup h2 {
+  text-align: center;
+  color: #1e6b4e;
+  margin-bottom: 1.5rem;
 }
 
 .signup-form {
@@ -68,25 +122,49 @@ body {
   gap: 1rem;
 }
 
+label {
+  font-weight: 600;
+  color: #444;
+}
+
 input, button {
   padding: 0.7rem;
-  border-radius: 5px;
+  border-radius: 6px;
   border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: #1e6b4e;
+  outline: none;
+  box-shadow: 0 0 5px rgba(30,107,78,0.3);
 }
 
 button.btn {
-  background: #1e6b4e;
+  background: linear-gradient(to right, #1e6b4e, #289e6b);
   color: white;
   border: none;
+  font-weight: 600;
 }
 
 button.btn:hover {
-  background: #289e6b;
+  background: linear-gradient(to right, #289e6b, #1e6b4e);
+  transform: translateY(-1px);
 }
 
 /* RESPONSIVE? for mobile and pad */
 @media (max-width: 768px) {
-  .hero-text h1 { font-size: 1.8rem; }
+  .hero {
+    height: 400px;
+    padding: 1rem;
+  }
+
+  .hero-text h1 { font-size: 2rem; }
   .hero-text p { font-size: 1rem; }
+
+  .about, .signup {
+    padding: 2rem 1rem;
+  }
 }
+
 /* CSS can be refined to look better */
