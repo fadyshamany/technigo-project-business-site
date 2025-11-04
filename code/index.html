@@ -5,12 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Site</title>
     <!-- Don't forget to link the CSS file here! -->
+     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Business name 🌻</h1>
 
     <!-- Video or image as a header is cool :) -->
+<!-- HERO SECTION -->
+ <header class="hero">
+  <picture class="hero-image">
+    <!-- smaller image for mobile -->
+    <source srcset="assets/hero.jpg" media="(max-width: 768px)">
+    <!-- larger image for desktop -->
+    <source srcset="assets/hero.jpg" media="(min-width: 769px)">
+    <!-- fallback (always loaded if no match) -->
+    <img src="assets/hero.jpg" alt="Office background" />
+  </picture>
 
+  <div class="hero-text">
+    <h1>Welcome to Harmony Tech</h1>
+    <p>Empowering your business through harmony and innovation.</p>
+    <a href="#signup" class="btn">Join Us</a>
+  </div>
+</header>
+
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>At Harmony Tech, we blend technology and creativity to help businesses achieve seamless digital growth.</p>
+  </section>
+
+  <!-- SIGNUP FORM -->
+  <section id="signup" class="signup">
+    <h2>Sign Up for Early Access</h2>
+
+    <form action="https://httpbin.org/anything" method="post" class="signup-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+      <fieldset>
+        <legend>Preferred Contact Method</legend>
+        <label><input type="radio" name="contact" value="email"> Email</label>
+        <label><input type="radio" name="contact" value="phone"> Phone</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Topics You’re Interested In</legend>
+        <label><input type="checkbox" name="topic" value="webdev"> Web Development</label>
+        <label><input type="checkbox" name="topic" value="design"> Design</label>
+        <label><input type="checkbox" name="topic" value="marketing"> Marketing</label>
+      </fieldset>
+
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Harmony Tech — All rights reserved.</p>
+  </footer>
+</body>
     <!-- Signup form -->
 
   </body>
