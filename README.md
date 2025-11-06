@@ -1,10 +1,6 @@
 # Business Site
 
-Replace this readme with your own information about the project. You can include things like:
-
-- Brief description of the assignment
-- How you approached the task, what tools and techniques you used, and how you planned it
-- If you had more time, what would be next?
+A standard webpage form with a main hero image. Basic stuff like namne email and password. a couple of checkboxes like contact method and topics interested in. name, email and password is required. Submit button calls https://httpbin.org/anything
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Site is live and can be viewed at https://dazzling-haupia-6df9b0.netlify.app
